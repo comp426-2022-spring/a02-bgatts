@@ -98,12 +98,15 @@ export function countFlips(array) {
  */
 
 export function flipACoin(call) {
+
+  console.log(call);
   let flip =coinFlip();
+  let res;
   if(flip==call){
-    let res = "win"
+    res = "win"
   }
   else{
-    let res='win'
+    res='loose'
   }
 
   let ans = {
@@ -112,7 +115,7 @@ export function flipACoin(call) {
     result: res
   }
 
-  return res
+  return ans
 
 
 
