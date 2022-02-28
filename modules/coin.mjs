@@ -99,7 +99,6 @@ export function countFlips(array) {
 
 export function flipACoin(call) {
 
-  console.log(call);
   let flip =coinFlip();
   let res;
   if(flip==call){
