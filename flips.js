@@ -30,13 +30,18 @@ function flipArr(){
     }
 
 
+    process.stdout.write(coinFlips(flip));
+
+
     console.log(flipRes);
     let resObj = {
         "heads":h_count,
         "tails":t_count
     }
 
-    console.log(resObj)
+    process.stdout.write(coinFlips(resObj))
+
+
 
 }
 
