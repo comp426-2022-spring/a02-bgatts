@@ -105,7 +105,7 @@ export function flipACoin(call) {
     res = "win"
   }
   else{
-    res='loose'
+    res='lose'
   }
 
   let ans = {
