@@ -5,17 +5,20 @@ import promptSync from 'prompt-sync';
 const prompt = promptSync()
 
 function flipArr(){
-    let flipNum = prompt('how many flips do you want to do?')
 
-    let flip = parseInt(flipNum);
+    let flip =1
 
-    if(flip == undefined){
-        flip =1;
+    let flipStr = prompt('how many flips do you want to do?')
+
+    let flipNum = parseInt(flipStr);
+
+    if(flipNum>flip){
+        flip = flipNum
     }
 
     let flipRes = coinFlips(flip);
 
-    process.stdout.write(flipRes);
+    console.log(flipRes);
 
 }
 
