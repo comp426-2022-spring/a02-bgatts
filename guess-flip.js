@@ -15,9 +15,11 @@ function flipCoin(){
         let ans = flipACoin(call);
         console.log(ans);
     }
+    else if (call==undefined){
+        throw new SyntaxError('No input, Usage: node guess-flip --call=[heads|tails]');
+    }
     else{
-        throw (new Error('Type heads or tails'));
-
+        throw new SyntaxError('Not Accepted, Usage: node guess-flip --call=[heads|tails]')
     }
 }
 
@@ -26,6 +28,5 @@ try{
     flipCoin();
 
 }    catch(e){
-    console.error(e.name);
-    console.error(e.message);
+    console.error('Error: '+ e);
 }
