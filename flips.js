@@ -8,9 +8,9 @@ function flipArr(){
 
     let flip =1
 
-    let flipStr = prompt('how many flips do you want to do?')
+    let number = prompt('--number: ')
 
-    let flipNum = parseInt(flipStr);
+    let flipNum = parseInt(number);
 
     if(flipNum>flip){
         flip = flipNum
@@ -30,7 +30,6 @@ function flipArr(){
     }
 
 
-    process.stdout.write(coinFlips(flip));
 
 
     console.log(flipRes);
@@ -39,8 +38,7 @@ function flipArr(){
         "tails":t_count
     }
 
-    process.stdout.write(coinFlips(resObj))
-
+    console.log(resObj);
 
 
 }
