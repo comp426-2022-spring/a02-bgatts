@@ -9,7 +9,6 @@ function flipCoin(){
     let args =(minimist)(process.argv.slice(2))
 
     let call = args["call"];
-    console.log(call)
 
     if(call=="heads" || call=="tails"){
         let ans = flipACoin(call);
@@ -19,7 +18,7 @@ function flipCoin(){
         throw new SyntaxError('no input');
     }
     else{
-        throw new SyntaxError('Usage: node guess-flip --call=[heads|tails]')
+        throw new Error('Usage: node guess-flip --call=[heads|tails]')
     }
 }
 
