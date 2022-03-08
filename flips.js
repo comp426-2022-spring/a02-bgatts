@@ -18,7 +18,25 @@ function flipArr(){
 
     let flipRes = coinFlips(flip);
 
+    let h_count=0
+    let t_count=0
+    for(let i=0; i<flipRes.length; i++){
+        if(flipRes[i]=="heads"){
+            h_count++
+        }
+        else{
+            t_count++
+        }
+    }
+
+
     console.log(flipRes);
+    let resObj = {
+        "heads":h_count,
+        "tails":t_count
+    }
+
+    console.log(resObj)
 
 }
 
