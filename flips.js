@@ -1,5 +1,7 @@
 // Import the coinFlip function from your coin.mjs file
 import { coinFlips } from './modules/coin.mjs';
+import minimist from 'minimist'
+
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync()
@@ -8,12 +10,13 @@ function flipArr(){
 
     let flip =1
 
-    let number = prompt('--number: ')
+    let args =(minimist)(process.argv.slice(2))
+    console.log(args)
 
-    let flipNum = parseInt(number);
+    let flipNum = args["number"];
 
     if(flipNum>flip){
-        flip = flipNum
+        flip = flipNum 
     }
 
     let flipRes = coinFlips(flip);
