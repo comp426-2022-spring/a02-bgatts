@@ -2,9 +2,6 @@
 import { coinFlips } from './modules/coin.mjs';
 import minimist from 'minimist'
 
-import promptSync from 'prompt-sync';
-
-const prompt = promptSync()
 
 function flipArr(){
 

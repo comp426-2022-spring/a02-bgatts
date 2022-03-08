@@ -1,10 +1,15 @@
 import { flipACoin } from './modules/coin.mjs';
-import promptSync from 'prompt-sync';
+import minimist from 'minimist'
 
-const prompt = promptSync()
+
 
 function flipCoin(){
-    let  call = prompt('Heads or tails? ');
+
+
+    let args =(minimist)(process.argv.slice(2))
+
+    let call = args["call"];
+    console.log(call)
 
     if(call=="heads" || call=="tails"){
         let ans = flipACoin(call);
