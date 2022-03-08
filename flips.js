@@ -11,7 +11,6 @@ function flipArr(){
     let flip =1
 
     let args =(minimist)(process.argv.slice(2))
-    console.log(args)
 
     let flipNum = args["number"];
 
