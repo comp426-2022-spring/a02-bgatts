@@ -35,11 +35,18 @@ function flipArr(){
 
 
     console.log(flipRes);
+
+
     let resObj = {
         "heads":h_count,
         "tails":t_count
     }
-
+    if(h_count + t_count == 1 && t_count==0){
+        delete resObj.tails
+    }
+    if(h_count + t_count == 1 && h_count==0){
+        delete resObj.heads
+    }
     console.log(resObj);
 
 
