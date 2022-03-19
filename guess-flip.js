@@ -18,7 +18,9 @@ function flipCoin(){
         throw new SyntaxError('no input');
     }
     else{
-        throw new Error('node guess-flip --call=[heads|tails]')
+        //throw new Error('node guess-flip --call=[heads|tails]')
+        throw new Error('node guess-flip(.js)? --call=(heads|tails)')
+
     }
 }
 
